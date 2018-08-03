@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--NOTE NEEDS ATTENTION --><!-- Chrome Tab logo!  called Favicon -->
+    <link rel="icon" type="image/png" href="media/images/controller.png">
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- RESPONSIVE CSS FOR SMALLER SCREEN SIZES -->
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+
+    <!-- FONT AWESOME V5 ('fas fa-...' is default) -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+
+    <title>Controller Customizer</title>
+  </head>
+  <body>
+
+
+  <div id="topColor"></div>
+
+
+<div class="container-fluid"> <!--to add opacity to background -->
+
+  <div class="company-logo">
+    <img id="d-pad" class="img-fluid" src="media/images/d-pad-logo.png" alt="D-pad image">
+    Play<strong>Stickerz</strong>
+  </div>
+
+  <button type="button" class="btn btn-primary" id="EmptyBasket">Empty Basket</button>
+
+  <div class="worldShipping">
+    Free world shipping
+    <i id="AddToBasketIcon" class="far fa-check-circle"></i>
+  </div>
+
+
+  <div class="container-fluid">
+    <img id="controller" class="img-fluid" src="media/images/controller.png" alt="Controller">
+  </div>
+  <div class="container-fluid">
+    <img id="sticker" class="img-fluid" src="media/images/sticker.png" alt="Sticker">
+  </div>
+  <div class="container-fluid">
+    <img id="sticker-logos" class="img-fluid" src="media/images/destiny-logo.png" alt="Sticker">
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="mx-auto color-container">
+        <!-- <div class="col-md-4 text-center color-container"> -->
+        <div class="colors blue" id="blue"></div>
+        <div class="colors pink" id="pink"></div>
+        <div class="colors red" id="red"></div>
+        <div class="colors green" id="green"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-fluid">
+  <button type="button" class="btn btn-secondary" id="AddToBasket"> &nbsp;&nbsp;&nbsp;<i id="AddToBasketIcon" class="fas fa-chevron-circle-down
+"></i> &nbsp; Select sticker</button>
+</div>
+
+
+<footer class="footer navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="row logo-container">
+      <!-- !!! IMPORTANT !!!   "mx-auto" KEY  TO CENTERING WITH BOOTSTRAP 4 !!!!!!!!!!!!!! -->
+      <div class="mx-auto">
+        <div class="logo-caption" id="batman-footer">
+          <img id="batman-logo" class ="logo img-fluid float" src="media/images/batman-logo.png" alt="Batman Logo">
+          <p id="batman-caption">Batman</p>
+        </div>
+        <div class="logo-caption" id="destiny-footer">
+          <img id="destiny-logo" class ="logo img-fluid" src="media/images/destiny-logo.png" alt="Destiny Logo">
+          <p id="destiny-caption">Destiny</p>
+        </div>
+        <div class="logo-caption" id="mass-effect-footer">
+          <img id="mass-effect-logo" class ="logo img-fluid" src="media/images/mass-effect-logo.png" alt="Mass Effect Logo">
+          <p id="mass-effect-caption">Mass Effect</p>
+        </div>
+        <div class="logo-caption" id="skyrim-footer">
+          <img id="skyrim-logo" class ="logo img-fluid" src="media/images/skyrim-logo.png" alt="Skyrim Logo">
+          <p id="skyrim-caption">Skyrim</p>
+        </div>
+        <div class="logo-caption" id="transformers-footer">
+          <img id="transformers-logo" class ="logo img-fluid" src="media/images/transformers-logo.png" alt="Transformers Logo">
+          <p id="transformers-caption">Transformers</p>
+        </div>
+        <div class="logo-caption" id="ps4-footer">
+          <img id="PS4-logo" class ="logo img-fluid" src="media/images/PS4-logo.png" alt="PS4 Logo">
+          <p id="ps4-caption">Playstation 4</p>
+        </div>
+      </div>
+    </div>
+    <div class="row copyright">
+      <!-- <div class=""> -->
+        <strike>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strike>
+        &nbsp;&nbsp;&nbsp; ©2018 PlayStickerz &nbsp;&nbsp;&nbsp;
+        <strike>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strike>
+      <!-- </div> -->
+    </div>
+  </div>
+</footer>
+
+    <!--NOTE: NEEDS ATTENTION--><!-- Accompanied JS file with scripts written to add more interaction -->
+    <script src="script.js"> </script>
+
+    <!-- Bootstrap 4 JS requirements: jQuery, Popper.js, BootstrapJS script -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

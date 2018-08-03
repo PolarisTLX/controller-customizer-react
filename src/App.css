@@ -1,0 +1,457 @@
+body {
+  /* NOTE This is set in the JavaScript
+  background-image: url("media/images/dark-transparent-stripe-background.png"),
+                    url("media/images/dark-transparent-background.png"),
+                    url("media/images/PS4-background.jpg");
+  */
+  background-color: rgb(52, 56, 89);
+  /* background-color: brown; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+#topColor {
+  background-color: rgb(0,113,244);
+  height: 3px;
+  width: 100%;
+}
+
+.company-logo {
+  /* display: inline; */
+  position: fixed;
+  color: lightgrey;
+  top: 8%;
+  left: 15%;
+  /* transform: translate(-50%, -50%); */
+}
+
+#d-pad {
+  height: 1em;
+  -webkit-filter: invert(80%);
+  display: inline-block;
+  margin-top: -0.25em;
+}
+
+#EmptyBasket {
+  position: fixed;
+  top: 8%;
+  left: 68%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 5;
+  font-size: 10px;
+  border-radius: 23px;
+
+  /* attempt to compensate for moving badge: */
+  /* padding-right: 0;
+  padding-top: 0; */
+}
+
+
+.badge {
+  background-color: rgb(67,211,120);
+  border-radius: 50%;
+  border: solid 1px black;
+  font-size: 1.1em;
+
+  /* to move the badge */
+  /* position: fixed;
+  transform: translate(50%, -100%); */
+}
+
+.worldShipping {
+  /* display: inline; */
+  font-size: 0.7em;
+  position: fixed;
+  color: rgb(138,139,153);
+  top: 9%;
+  left: 81%;
+  /* transform: translate(-50%, -50%); */
+}
+
+
+#controller, #sticker, #sticker-logos {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  /* THIS COMPENSATES FOR IMAGE SIZE TO KEEP IT CENTERED (moves top-left corner)*/
+  transform: translate(-50%, -50%);
+  /* margin: auto; */
+  width: 50%;
+  /* height: 12em; */
+}
+#sticker {
+  visibility: hidden;
+}
+#sticker-logos {
+  margin-top: 2.3%;
+  width: 6%;
+  /* max-height: 1.5em; */
+  /* height: 1.5em; */
+  /* -webkit-filter: hue-rotate(50deg); */
+  visibility: hidden;
+}
+
+.color-container {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 20%; */
+}
+
+.colors {
+  display: inline-block;
+  height: 1.0em;
+  width: 1.0em;
+  border-radius: 50%;
+  /* border: solid 1.5px grey; */
+  margin: 0.5em;
+}
+
+.blue {
+  background-color: rgb(0,113,244);
+  /* to make blue selected by default: */
+  height: 1.3em;
+  width: 1.3em;
+}
+.pink {
+  background-color: rgb(201,54,242);
+}
+.red {
+  background-color: rgb(255,48,80);
+}
+.green {
+  background-color: rgb(15,207,35);
+}
+.white {
+  background-color: white;
+}
+
+#AddToBasket {
+  position: fixed;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  border-radius: 23px;
+  font-size: 10px;
+}
+
+/* To force remove border/shadow around button when clicked */
+#AddToBasket:focus {
+  box-shadow: none;
+}
+
+.footer {
+  background-color: rgb(33, 36, 59);
+  position: fixed; /* Fixed instead of absolute fixes the scrolling issue. */
+  bottom: 0;
+  height: 33%;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 4em;
+}
+
+.logo-caption {
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  text-align: center;
+  margin: 0 2em;
+  -webkit-filter: invert(50%);
+  /* this is passed to each footer-logo */
+  position: fixed;
+  /* This is the height of all the logos in the footer: */
+  top: 80%;
+  /* THIS COMPENSATES FOR IMAGE SIZE TO KEEP IT CENTERED (moves top-left corner)*/
+  transform: translate(-50%, -50%);
+  width: 7%;
+}
+
+.logo {
+  width: 80%
+}
+#PS4-logo {
+  margin-top: -25px;
+}
+
+.logo-caption p {
+  margin-bottom: 0;
+}
+
+#batman-caption {
+  margin-top: 1%;
+  font-size: 100%;
+}
+#destiny-caption {
+  margin-top: 4%;
+  font-size: 100%;
+}
+#mass-effect-caption {
+  margin-top: -4%;
+  font-size: 100%;
+}
+#skyrim-caption {
+  margin-top: 0%;
+  font-size: 100%;
+}
+#transformers-caption {
+  margin-top: 2%;
+  font-size: 100%;
+}
+#ps4-caption {
+  margin-top: 3%;
+  font-size: 100%;
+}
+
+
+/* POSITIONING ALL THE LOGOS IN THE FOOTER */
+#batman-footer {
+  left: 10%;
+}
+#destiny-footer {
+  left: 25%;
+}
+#mass-effect-footer {
+  left: 40%;
+}
+#skyrim-footer {
+  left: 55%;
+}
+#transformers-footer {
+  left: 70%;
+}
+#ps4-footer {
+  padding-top: 1.5%;
+  left: 85%;
+}
+/* END OF ALL FOOTER LOGOS */
+
+
+
+/* change the logos to be white on hover as requested */
+.logo-caption:hover{
+  -webkit-filter: saturate(0) brightness(50);
+}
+.logo-container {
+  /* display: inline; */
+  width: 100%;
+  position: fixed;
+  /* top: 85%;
+  left: 4%; */
+  /* THIS COMPENSATES FOR IMAGE SIZE TO KEEP IT CENTERED (moves top-left corner)*/
+  /* transform: translate(-50%, -50%); */
+  /* margin: 0 auto; */
+  /* margin: 0 10% 0 10%; */
+}
+
+/* COPYRIGHT */
+.copyright {
+  position: fixed;
+  top: 92%;
+  left: 50%;
+  transform: translate(-45%, -8%);
+  color: rgb(52, 56, 89);
+  font-size: 0.8em;
+}
+
+
+
+/* FOLLOW ALONG HIGHLIGHT  */
+.highlight {
+  transition: all 0.2s;
+  position: absolute;
+  background: rgba(49, 49, 82, 1);
+  display: none;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
+  z-index: -1;
+  border-radius: 5px;
+  margin-bottom: -10px;
+}
+.highlight::before, .highlight::after {
+  content: "";
+  position: absolute;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-radius: 1000%;
+  /* overflow: hidden; */
+}
+.highlight::before {
+  /* padding-top: 25px; */
+  /* offset */
+  width: 100%;
+  bottom: 90%;
+  border-bottom: 15px solid  rgba(49, 49, 82, 1);
+  /* border-radius: 5px; */
+}
+.highlight::after {
+  width: 100%;
+  top: 90%;
+  border-top: 15px solid  rgba(49, 49, 82, 1);
+}
+
+
+
+/* @media only screen and (max-width: 768px) {
+  #controller {
+    height: 6em;
+  }
+} */
+
+
+/* RESPONIVE CSS  */
+
+/* for small devices: phones */
+
+@media only screen and (max-width: 768px) {
+  .logo-caption p {
+    display: none;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* REDUCE THE FOOTER SIZE AND LOWER THE FOOTER LOGO WHEN IN LANDSCAPE ON A MOBILE DEVICE */
+@media only screen and (max-width: 768px) and (orientation:landscape) {
+
+  .worldShipping {
+    left: 83%;
+  }
+
+  #controller, #sticker, #sticker-logos {
+    top: 33%;
+    /* width: 70%; */
+  }
+  .color-container {
+    top: 55%;
+  }
+
+  #AddToBasket {
+    top: 71%;
+  }
+
+  .footer {
+    height: 29%;  /* THIS NEVER SEEMS TO RESPOND FOR LANDSCAPE!!! */
+  }
+  .logo-caption {
+    top: 80%;
+  }
+
+  .highlight::before {
+    bottom: 70%;
+  }
+  .highlight::after {
+    top: 70%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+  #batman-footer {
+    left: 8%;
+  }
+  #destiny-footer {
+    left: 23%;
+  }
+  #mass-effect-footer {
+    left: 38%;
+  }
+  #skyrim-footer {
+    left: 53%;
+  }
+  #transformers-footer {
+    left: 68%;
+  }
+  #ps4-footer {
+    left: 82%;
+  }
+  #PS4-logo {
+    margin-top: -12px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) and (orientation:portrait) {
+
+  .worldShipping {
+    left: 66%;
+    top: 13.5%;
+  }
+
+  #controller, #sticker, #sticker-logos {
+    top: 37%;
+    width: 70%;
+  }
+  #sticker-logos {
+    margin-top: 3.3%;
+    width: 8.4%;
+  }
+  .color-container {
+    top: 54%;
+  }
+
+  #AddToBasket {
+    top: 63%;
+  }
+
+  .footer {
+    height: 37%;
+  }
+
+  .logo-caption {
+    width: 14%;
+  }
+  .logo {
+    width: 100%;
+  }
+  #PS4-logo {
+    margin-top: 0px;
+  }
+
+  /* .highlight {
+    height: 100px;
+  } */
+
+  .highlight::before {
+    bottom: 80%;
+  }
+  .highlight::after {
+    top: 80%;
+  }
+
+
+  /* POSITIONING ALL THE LOGOS IN THE FOOTER */
+  #batman-footer {
+    top: 75%;
+    left: 13%;
+  }
+  #destiny-footer {
+    top: 75%;
+    left: 41.5%;
+  }
+  #mass-effect-footer {
+    top: 75%;
+    left: 66.6%;
+  }
+  #skyrim-footer {
+    top: 88%;
+    left: 13%;
+  }
+  #transformers-footer {
+    top: 88%;
+    left: 41.5%;
+  }
+  #ps4-footer {
+    top: 88%;
+    left: 66.6%;
+    padding-top: 1.5%;
+  }
+  /* END OF ALL FOOTER LOGOS */
+
+  .copyright {
+    top: 95.5%;
+    font-size: 0.5em;
+  }
+}
