@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import batmanBackground from './images/batman-background.jpg'
+import meBackground from './images/mass-effect-background.jpg'
+import destinyBackground from './images/destiny-background.jpg'
+import skyrimBackground from './images/skyrim-background.jpg'
+import transformersBackground from './images/transformers-background.jpg'
+import ps4Background from './images/PS4-background.jpg'
+import blueTransBackground from './images/blue-transparent-background.png'
+import greenTransBackground from './images/green-transparent-background.png'
+import pinkTransBackground from './images/pink-transparent-background.png'
+import redTransBackground from './images/red-transparent-background.png'
+import darkTransStripeBackground from './images/dark-transparent-stripe-background.png'
+import darkTransBackground from './images/dark-transparent-background.png'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
@@ -10,11 +22,11 @@ registerServiceWorker();
 
 // const logos = document.getElementsByClassName("logo-caption");
 // This is required to give the background a starting position for all the functions to behave properly.
-document.body.style.backgroundImage =
-                                      'url("media/images/blue-transparent-background.png"), ' +
-                                      'url("media/images/dark-transparent-stripe-background.png"), ' +
-                                      'url("media/images/dark-transparent-background.png"), ' +
-                                      'url("media/images/PS4-background.jpg")';
+document.body.style.backgroundImage = `url(${blueTransBackground}), ` +
+                                      `url(${darkTransStripeBackground}), ` +
+                                      `url(${darkTransBackground}), ` +
+                                      `url(${ps4Background})`;
+
 // console.log(document.body.style.backgroundImage);
 const logos = document.querySelectorAll('.logo-caption');
 const logoColor = document.querySelectorAll('.logo');
@@ -88,23 +100,53 @@ function clickAdd() {
 
 // THIS FUNCTION CHANGES THE STICKER LOGO AND THE BACKGROUND IMAGE
 function grabElementId() {
+  console.time("run")
+  // let start = new Date().getTime().toFixed(3);
   // childNode[1] is used because the img is the second child inside the p element of class 'logo-caption'
   let logoId = this.childNodes[1].id;
-  let game = logoId.slice(0,(logoId.length - 5));
+  let game = logoId.slice(0,(logoId.length - 8));
+
+  let new_background
+  switch(game) {
+    case 'batman':
+      new_background = batmanBackground
+      break;
+    case 'destiny':
+      new_background = destinyBackground
+      break;
+    case 'mass-effect':
+      new_background = meBackground
+      break;
+    case 'skyrim':
+      new_background = skyrimBackground
+      break;
+    case 'transformers':
+      new_background = transformersBackground
+      break;
+    default:
+      new_background = ps4Background
+      break;
+  }
 
   // sticker.src = `media/images/sticker-${game}-blue.png`;
   let current_background = document.body.style.backgroundImage.split(",");
-  current_background[current_background.length-1] = `url('media/images/${game}-background.jpg')`;
+  current_background[current_background.length-1] = `url(${new_background})`;
+
   document.body.style.backgroundImage = current_background.join(",");
 // this for the logo that sits on top of the sticker
-  stickerLogo.src = "{require(./images/"+game+"-logo.png)}";
+  stickerLogo.src = require(`./images/${game}-logo.png`);
   stickerLogo.style.visibility = "visible";
-  // sticker.style.visibility = "visible";
+
+  let sticker = document.getElementById('sticker');
+  sticker.style.visibility = "visible";
 
   addButton.className = "btn btn-primary";
   addButton.innerHTML = '&nbsp;&nbsp;&nbsp;<i id="AddToBasketIcon" class="fas fa-shopping-basket"></i> &nbsp; Add To Basket';
 
   // addButtonIcon.className = "fas fa-shopping-basket";
+  // let end = new Date().getTime().toFixed(3);
+  // console.log((end - start).toFixed(3));
+  console.timeEnd("run");
 }
 
 const colors = document.querySelectorAll('.colors');
@@ -124,7 +166,24 @@ function changeColor() {
   let current_background = document.body.style.backgroundImage.split(",");
 
   // if (current_background.length > 3) {
-    current_background[0] = `url('media/images/${color}-transparent-background.png')`;
+
+  let newColorBackground
+  switch(color) {
+    case 'blue':
+      newColorBackground = blueTransBackground;
+      break;
+    case 'green':
+      newColorBackground = greenTransBackground;
+      break;
+    case 'pink':
+      newColorBackground = pinkTransBackground;
+      break;
+    case 'red':
+      newColorBackground = redTransBackground;
+      break;
+  }
+
+  current_background[0] = `url(${newColorBackground})`;
   // } else {
     // current_background.unshift(`url('media/images/${color}-transparent-background.png')`);
   // }

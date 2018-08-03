@@ -16,13 +16,13 @@ class App extends Component {
 
       <div className="company-logo">
         <img id="d-pad" className="img-fluid" src={require("./images/d-pad-logo.png")} alt="D-pad image" />
-        Play<strong>Stickerz</strong>
+        &nbsp;Play<strong>Stickerz</strong>
       </div>
 
       <button type="button" className="btn btn-primary" id="EmptyBasket">Empty Basket</button>
 
       <div className="worldShipping">
-        Free world shipping
+        Free world shipping&nbsp;
         <i id="AddToBasketIcon" className="far fa-check-circle"></i>
       </div>
 
@@ -84,7 +84,7 @@ class App extends Component {
             </div>
             <div className="logo-caption" id="ps4-footer">
               <img id="PS4-logo" className="logo img-fluid" src={require("./images/PS4-logo.png")} alt="PS4 Logo" />
-              <p id="ps4-caption">Playstation 4</p>
+              <p id="PS4-caption">Playstation 4</p>
             </div>
           </div>
         </div>
